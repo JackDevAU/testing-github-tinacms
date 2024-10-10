@@ -77,6 +77,7 @@ jobs:
         env:
           NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+          NEXT_PUBLIC_IS_LOCAL: false
         run: npx tinacms build
 
       - name: Build with Next.js

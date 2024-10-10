@@ -3,7 +3,7 @@ import React from "react";
 import { ThemeProvider } from "../components/theme-provider";
 import { Inter as FontSans, Lato, Nunito } from "next/font/google";
 import { cn } from "../lib/utils";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import client from "../tina/__generated__/client";
 
 const fontSans = FontSans({
@@ -43,7 +43,6 @@ export default async function RootLayout({
         return `font-nunito ${nunito.variable}`;
       case "lato":
         return `font-lato ${lato.variable}`;
-      case "sans":
       default:
         return `font-sans ${fontSans.variable} `;
     }

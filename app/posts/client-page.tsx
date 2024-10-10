@@ -6,11 +6,9 @@ import React from "react";
 import { useLayout } from "../../components/layout/layout-context";
 import { BsArrowRight } from "react-icons/bs";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
-import {
-  PostConnectionQuery,
-  PostConnectionQueryVariables,
-} from "../../tina/__generated__/types";
+
 import { useTina } from "tinacms/dist/react";
+import type { PostConnectionQuery, PostConnectionQueryVariables } from "../../tina/__generated__/types";
 
 const titleColorClasses = {
   blue: "group-hover:text-blue-600 dark:group-hover:text-blue-300",
@@ -38,13 +36,13 @@ export default function PostsClientPage(props: ClientPostProps) {
         const post = postData.node;
         const date = new Date(post.date);
         let formattedDate = "";
-        if (!isNaN(date.getTime())) {
+        if (!Number.isNaN(date.getTime())) {
           formattedDate = format(date, "MMM dd, yyyy");
         }
         return (
           <Link
             key={post.id}
-            href={`/posts/` + post._sys.breadcrumbs.join("/")}
+            href={`/posts/${post._sys.breadcrumbs.join("/")}`}
             className="group block px-6 sm:px-8 md:px-10 py-10 mb-8 last:mb-0 bg-gray-50 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-1000 rounded-md shadow-sm transition-all duration-150 ease-out hover:shadow-md hover:to-gray-50 dark:hover:to-gray-800"
           >
             <h3

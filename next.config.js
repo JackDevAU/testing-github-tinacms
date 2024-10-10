@@ -12,7 +12,8 @@ module.exports = {
    *
    * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
    */
-  basePath: "/testing-github-tinacms",
+  basePath: process.env.NEXT_PUBLIC_IS_LOCAL === undefined  ? "" : "/testing-github-tinacms",
+
 
   images: {
      /**
@@ -30,21 +31,13 @@ module.exports = {
       },
     ],
   },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
-      use: ["@svgr/webpack"],
-    });
+  // webpack(config) {
+  //   config.module.rules.push({
+  //     test: /\.svg$/i,
+  //     issuer: /\.[jt]sx?$/,
+  //     use: ["@svgr/webpack"],
+  //   });
 
-    return config;
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/admin",
-        destination: "/admin/index.html",
-      },
-    ];
-  },
+  //   return config;
+  // },
 };

@@ -11,10 +11,10 @@ const Page: Collection = {
   ui: {
     router: ({ document }) => {
       if (document._sys.filename === "home") {
-        return `/`;
+        return "/";
       }
       if (document._sys.filename === "about") {
-        return `/about`;
+        return "/about";
       }
       return undefined;
     },

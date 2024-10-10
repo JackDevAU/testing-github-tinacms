@@ -27,7 +27,7 @@ const config = defineConfig({
   build: {
     publicFolder: "public", // The public asset folder for your framework
     outputFolder: "admin", // within the public folder
-    basePath: "testing-github-tinacms"
+    basePath: "/testing-github-tinacms"
   },
   schema: {
     collections: [Page, Post, Author, Global],

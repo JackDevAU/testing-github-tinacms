@@ -10,6 +10,8 @@ const Page: Collection = {
   path: "content/pages",
   ui: {
     router: ({ document }) => {
+      console.log(document);
+      
       if (document._sys.filename === "home") {
         return "/";
       }

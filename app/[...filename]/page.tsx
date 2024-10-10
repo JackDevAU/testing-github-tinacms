@@ -14,7 +14,7 @@ export default async function Page({
 
   return (
     <Layout rawPageData={data}>
-      <ClientPage {...data}></ClientPage>
+      <ClientPage {...data} />
     </Layout>
   );
 }

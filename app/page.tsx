@@ -1,3 +1,7 @@
+import React from 'react'
+
 export default function page() {
-  return null;
+  return (
+    <div>Base Page</div>
+  )
 }

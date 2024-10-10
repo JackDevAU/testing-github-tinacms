@@ -12,7 +12,7 @@ module.exports = {
    *
    * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
    */
-  basePath: "/nextjs-github-pages",
+  basePath: "/testing-github-tinacms",
 
   images: {
      /**
@@ -41,10 +41,6 @@ module.exports = {
   },
   async rewrites() {
     return [
-      {
-        source: "/",
-        destination: "/home",
-      },
       {
         source: "/admin",
         destination: "/admin/index.html",

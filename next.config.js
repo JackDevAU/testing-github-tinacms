@@ -1,4 +1,7 @@
 
+console.log(process.env.NEXT_PUBLIC_IS_LOCAL);
+
+
 /** @type {import('next').NextConfig} */
 module.exports = {
  /**
@@ -12,7 +15,7 @@ module.exports = {
    *
    * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
    */
-  basePath: process.env.NEXT_PUBLIC_IS_LOCAL === undefined  ? "" : "/testing-github-tinacms",
+  basePath: process.env.NEXT_PUBLIC_IS_LOCAL === undefined  ? "/testing-github-tinacms" : "",
 
 
   images: {

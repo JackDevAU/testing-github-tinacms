@@ -5,6 +5,8 @@ import Global from "./collection/global";
 import Author from "./collection/author";
 import Page from "./collection/page";
 
+console.log(process.env.NEXT_PUBLIC_IS_LOCAL);
+
 const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   branch:
@@ -27,7 +29,7 @@ const config = defineConfig({
   build: {
     publicFolder: "public", // The public asset folder for your framework
     outputFolder: "admin", // within the public folder
-    basePath: process.env.NEXT_PUBLIC_IS_LOCAL === undefined  ? "" : "testing-github-tinacms"  // Should NOT have a leading slash
+    basePath: process.env.NEXT_PUBLIC_IS_LOCAL === undefined  ? "/testing-github-tinacms" : "",
   },
   schema: {
     collections: [Page, Post, Author, Global],

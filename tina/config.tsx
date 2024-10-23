@@ -5,8 +5,6 @@ import Global from "./collection/global";
 import Author from "./collection/author";
 import Page from "./collection/page";
 
-console.log(process.env.NEXT_PUBLIC_IS_LOCAL);
-
 const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   branch:

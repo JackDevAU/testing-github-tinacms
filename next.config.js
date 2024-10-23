@@ -1,7 +1,3 @@
-
-console.log(process.env.NEXT_PUBLIC_IS_LOCAL);
-
-
 /** @type {import('next').NextConfig} */
 module.exports = {
  /**

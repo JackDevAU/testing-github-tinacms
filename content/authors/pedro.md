@@ -1,5 +1,4 @@
 ---
 name: Pedro
-avatar: /uploads/llama-6.avif
+avatar: /uploads/authors/pedro.webp
 ---
-
